@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Barber's Hollow"/>
+  <meta property="og:type" content="rumor"/>
+  <meta property="og:url" content="http://oooooo.github.io/app"/>
+  <meta property="og:image" content="http://oooooo.github.io/app/img/barber2.png"/>
+  <meta property="og:site_name" content="Barber's Hollow"/>  
+  <meta property="og:description" content="Keeping secret was driving the barber crazy, Then he found a deep hollow and whispered into it...."/>
+	<title>Barber's Hollow</title>
+	<script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="dist/css/main.css"> 
+  
+</head>
+<body>
+  <!-- Google Tag Manager -->
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MV6WD9"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MV6WD9');</script>
+  <!-- End Google Tag Manager -->
+  <div id="fb-root"></div> 
+
+  <div class="intheforest">
+
+    <div class="hd" id="hd"> 
+      <svg class="icon ic_tree">
+        <use xlink:href="dist/img/svg.svg#ic_tree"></use>
+      </svg> 
+      <p class="story">
+        Keeping secret was driving the barber crazy, Then he found a deep hollow and whispered into it......
+      </p>   
+
+      <div class="close">
+        <input type='text' id='nameInput' class="whoitis" placeholder="I'm the King's Barber">  
+      </div>
+
+      <input type='text' id='messageInput' class="whisper" placeholder="The king has donkey's ears...">
+    </div>  
+
+    <ul id='messageList' class="hearsays">
+      <!-- <div class="gra"></div> -->
+    </ul>  
+
+    <div class="footnote">  
+      <p class="txtflash">Whom You promised that you would not share their secret but you could not keep it to yourself. <span class="stxt">你答應了誰不會分享他的秘密，但你無法守住你自己的承諾。</span></p>
+      <a class="icon" href="#">
+        <svg class="icon ic_king">
+          <use xlink:href="dist/img/svg.svg#ic_king_b"></use>
+        </svg> 
+      </a>
+      <div style="text-align: center">
+        <div class="fb-like" data-href="http://oooooo.github.io/app/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div> 
+      </div>
+    </div> 
+
+  </div>
+
+  <script src="dist/js/app.js"></script>
+  <script> 
+    $(document).ready(function() { 
+        // focus
+        $('#nameInput').focus();
+
+        // random bg
+        var x = Math.round((Math.random()*2+1));
+        $("#hd").addClass("barber"+x)
+
+    }); 
+    //top coll
+    $(function(){
+      $(window).load(function(){
+        $(window).bind('scroll resize', function(){
+          var $this = $(this);
+          var $this_Top=$this.scrollTop();
+          var $ipu = $("input")
+          //當高度小於100時，關閉區塊 
+          if($this_Top < 160){
+            // $('#hd').stop().animate({top:"0px"}),
+            $('#hd').removeClass("shd");
+          }
+          if($this_Top > 160){
+            // $('#hd').stop().animate({top:"-60px"});
+            $('#hd').addClass("shd"); 
+          }
+      　}).scroll();
+      });
+    });
+    //fb like
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.5&appId=273587272666579";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk')); 
+
+</script>  
+</body>
+</html>

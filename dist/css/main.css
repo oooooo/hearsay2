@@ -1,0 +1,243 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Ubuntu|Belleza);
+body { -webkit-font-smoothing: antialiased; font-family: "Ubuntu", sans-serif; }
+
+.gra { /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#171211+0,171211+100&0+0,1+100 */ background: -moz-linear-gradient(top, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.8) 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(top, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.8) 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(to bottom, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000F0F1C', endColorstr='#770F0F1C',GradientType=0 ); /* IE6-9 */ }
+
+@keyframes fla { 0% { color: #fff; text-shadow: 0px -1px 0px #111111, 0px 1px 1px #111111; }
+  100% { color: #111; text-shadow: 0px -1px 0px #000,0px 1px 1px #222; } }
+@keyframes filteranim { 0% { -webkit-filter: sepia(0) saturate(2); }
+  50% { -webkit-filter: sepia(1) saturate(3); }
+  100% { -webkit-filter: sepia(0) saturate(2); } }
+/*
+filter-me { filter: <filter-function> [<filter-function>]* | none
+} 
+
+blur() 			模糊
+brightness() 	明亮
+contrast() 		對比
+drop-shadow() 	陰影
+grayscale() 	灰階
+hue-rotate() 	色相環
+invert() 		反轉
+opacity() 		透明度
+saturate() 		彩度
+sepia() 		褐色調
+url() - for applying SVG filters
+custom() - "coming soon" 
+*/
+@keyframes txtf { 0% { text-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+  15% { text-shadow: 0 0 2px rgba(255, 255, 255, 0.3); }
+  35% { text-shadow: 0 0 0px rgba(255, 255, 255, 0.6); }
+  80% { text-shadow: 0 0 0px rgba(255, 255, 255, 0.6); }
+  90% { text-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+  100% { text-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+.txtflash { color: rgba(255, 255, 255, 0); animation-name: txtf; animation-duration: 10s; animation-iteration-count: infinite; }
+
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/** 1. Set default font family to sans-serif. 设置默认字体家族无衬线。 2. Prevent iOS and IE text size adjust after device orientation change, without disabling user zoom. 防止 iOS 和 IE 在裝置方向改變後调整文字大小，没有禁止使用者放大。
+ * */
+html { font-family: sans-serif; /* 1 */ -ms-text-size-adjust: 100%; /* 2 */ -webkit-text-size-adjust: 100%; /* 2 */ }
+
+/** Remove default margin. */
+body { margin: 0; }
+
+/* HTML5 display definitions 定義 ========================================================================== */
+/** Correct `block` display not defined for any HTML5 element in IE 8/9. IE8/9 中 HTML5 元素沒有定義正確的`block`顯示  Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox. 在 IE 10/11 and Firefox 沒有在`細節` or `總結`定義正確的`block`顯示。 Correct `block` display not defined for `main` in IE 11. 在 IE11 沒有在`main` 定義正確的`block`顯示。 */
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary { display: block; }
+
+/** 1. Correct `inline-block` display not defined in IE 8/9. 修正`inline-block`顯示 沒有定義在 IE8/9。 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera. Chrome，火狐和 Opera progress`的'垂直對齊方式規範化。 */
+audio, canvas, progress, video { display: inline-block; /* 1 */ vertical-align: baseline; /* 2 */ }
+
+/** Prevent modern browsers from displaying `audio` without controls. 防止現代瀏覽器顯示`audio`沒有被管制 。 Remove excess height in iOS 5 devices. 在 iOS 5 裝置中 去除多餘的高度。 */
+audio:not([controls]) { display: none; height: 0; }
+
+/** Address `[hidden]` styling not present in IE 8/9/10. 地址`[HIDDEN]`樣式在 IE8/9/10 不顯現。
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22. 隱藏`template`元素 在IE8/9/10/11，Safari 和 Firefox<22。 */
+[hidden], template { display: none; }
+
+/* Links ========================================================================== */
+/** Remove the gray background color from active links in IE 10. 在 IE 10 移除觸發連結時的灰色背景色 */
+a { background-color: transparent; }
+
+/** Improve readability of focused elements when they are also in an active/hover state. 提高焦點元素的可讀性，當在活動/懸停的狀態時。 */
+a:active, a:hover { outline: 0; }
+
+/* Text-level semantics 文本 語義  ========================================================================== */
+/** Address inconsistent styling of `abbr[title]`. 調整`簡稱[標題]`的不一致的造型。 1. Correct styling in Firefox 39 and Opera 12. 在 Firefox39 和 Opera12 正確的造型。 2. Correct missing styling in Chrome, Edge, IE, Opera, and Safari. 在 Chrome, Edge, IE，Opera 和 Safari2 中，糾正遺失的樣式。
+ * */
+abbr[title] { border-bottom: none; /* 1 */ text-decoration: underline; /* 2 */ text-decoration: underline dotted; /* 2 */ }
+
+/** Address inconsistent styling of b and strong. 調整`b`,`strong`的不一致的造型。 1. Correct duplicate application of `bolder` in Safari 6.0.2. 在 Safari6.0.2 正確重複應用`bolder`。 2. Correct style set to `bold` in Edge 12+, Safari 6.2+, and Chrome 18+. 在 Edge 12+, Safari 6.2+, and Chrome 18+ 正確樣式設定到`bold`。 */
+b, strong { font-weight: inherit; /* 1 */ }
+
+b, strong { font-weight: bolder; /* 2 */ }
+
+/** Address styling not present in Safari and Chrome. 在 Safari and Chrome. 沒有正確顯示樣式 */
+dfn { font-style: italic; }
+
+/** Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari, and Chrome. */
+h1 { font-size: 2em; margin: 0.67em 0; }
+
+/** Address styling not present in IE 8/9. */
+mark { background-color: #ff0; color: #000; }
+
+/** Address inconsistent and variable font size in all browsers. */
+small { font-size: 80%; }
+
+/** Prevent `sub` and `sup` affecting `line-height` in all browsers. */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+/* Embedded content ========================================================================== */
+/** Remove border when inside `a` element in IE 8/9/10. */
+img { border: 0; }
+
+/** Correct overflow not hidden in IE 9/10/11. */
+svg:not(:root) { overflow: hidden; }
+
+/* Grouping content ========================================================================== */
+/** Address margin not present in IE 8/9 and Safari. */
+figure { margin: 1em 40px; }
+
+/** Address inconsistent styling of `hr`. 1. Correct `box-sizing` set to `border-box` in Firefox. 2. Correct `overflow` set to `hidden` in IE 8/9/10/11 and Edge 12. */
+hr { box-sizing: content-box; /* 1 */ height: 0; /* 1 */ overflow: visible; /* 2 */ }
+
+/** Contain overflow in all browsers. */
+pre { overflow: auto; }
+
+/** 1. Correct inheritance and scaling of font-size for preformatted text. 2. Address odd `em`-unit font size rendering in all browsers. */
+code, kbd, pre, samp { font-family: monospace, monospace; /* 1 */ font-size: 1em; /* 2 */ }
+
+/* Forms ========================================================================== */
+/** Known limitation: by default, Chrome and Safari on OS X allow very limited styling of `select`, unless a `border` property is set. */
+/** 1. Correct font properties not being inherited. 2. Address margins set differently in Firefox 4+, Safari, and Chrome. */
+button, input, optgroup, select, textarea { font: inherit; /* 1 */ margin: 0; /* 2 */ }
+
+/** Address `overflow` set to `hidden` in IE 8/9/10/11. */
+button { overflow: visible; }
+
+/** Address inconsistent `text-transform` inheritance for `button` and `select`. All other form control elements do not inherit `text-transform` values. Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera. Correct `select` style inheritance in Firefox. */
+button, select { text-transform: none; }
+
+/** 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls. 2. Correct inability to style clickable `input` types in iOS. 3. Improve usability and consistency of cursor style between image-type `input` and others. */
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; /* 2 */ cursor: pointer; /* 3 */ }
+
+/** Re-set default cursor for disabled elements. */
+button[disabled], html input[disabled] { cursor: default; }
+
+/** Remove inner padding and border in Firefox 4+. */
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/** Restore focus style in Firefox 4+ (unset by a rule above) */
+button:-moz-focusring, input:-moz-focusring { outline: 1px dotted ButtonText; }
+
+/** Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet. */
+input { line-height: normal; }
+
+/** It's recommended that you don't attempt to style these elements. Firefox's implementation doesn't respect box-sizing, padding, or width.  1. Address box sizing set to `content-box` in IE 8/9/10. 2. Remove excess padding in IE 8/9/10. */
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
+
+/** Fix the cursor style for Chrome's increment/decrement buttons. For certain `font-size` values of the `input`, it causes the cursor style of the decrement button to change from `default` to `text`. */
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { height: auto; }
+
+/** Address `appearance` set to `searchfield` in Safari and Chrome. */
+input[type="search"] { -webkit-appearance: textfield; }
+
+/** Remove inner padding and search cancel button in Safari and Chrome on OS X. Safari (but not Chrome) clips the cancel button when the search input has padding (and `textfield` appearance). */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+/** Define consistent border, margin, and padding. */
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+
+/** 1. Correct `color` not being inherited in IE 8/9/10/11. 2. Remove padding so people aren't caught out if they zero out fieldsets. */
+legend { border: 0; /* 1 */ padding: 0; /* 2 */ }
+
+/** Remove default vertical scrollbar in IE 8/9/10/11. */
+textarea { overflow: auto; }
+
+/** Restore font weight (unset by a rule above). NOTE: the default cannot safely be changed in Chrome and Safari on OS X. */
+optgroup { font-weight: bold; }
+
+label { font-size: .6em; }
+
+input { font-size: 1em; box-sizing: border-box; font-family: 'Quicksand', sans-serif; color: #fff; border: none; background: none; width: auto; }
+
+input:focus { outline: none; }
+
+ul, ul li { margin: 0; padding: 0; list-style: none; }
+
+p { line-height: 1.4; }
+
+.ic_tree, .ic_king { fill: #fff; }
+
+.icon { width: 36px; height: 36px; }
+
+html { height: 100%; backgrond: #111111; }
+
+body { min-height: 100%; display: flex; color: rgba(255, 255, 255, 0.6); background: #111111; font-size: 26px; }
+
+.intheforest { display: inherit; flex-direction: column; flex: 1; padding: 20px; }
+.intheforest .hd p, .intheforest .footnote p { font-size: .5em; margin: 0; font-family: "Belleza", sans-serif; transition: all .2s; }
+.intheforest .hd .icon, .intheforest .footnote .icon { transition: all .2s; }
+.intheforest .footnote { background: linear-gradient(to bottom, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.8) 15%); background: -moz-linear-gradient(top, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.8) 15%); background: -webkit-linear-gradient(top, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.8) 15%); }
+.intheforest .footnote .icon { display: block; }
+.intheforest .footnote p { text-align: center; margin: 0; opacity: .4; }
+.intheforest .footnote a { display: inline-block; margin-left: auto; margin-right: auto; opacity: .1; }
+.intheforest .footnote a:hover { opacity: 1; }
+.intheforest .hd { background: linear-gradient(to bottom, rgba(17, 17, 17, 0) 90%, #111111 100%); background: -moz-linear-gradient(top, rgba(17, 17, 17, 0) 90%, #111111 100%); background: -webkit-linear-gradient(top, #111111 90%, rgba(17, 17, 17, 0) 100%); position: fixed; left: 0; right: 0; top: 0; z-index: 50; padding: 20px; }
+.intheforest .hd:after { -webkit-animation: filteranim 5s infinite; }
+.intheforest .hd .icon, .intheforest .hd p.story { position: fixed; }
+.intheforest .hd .icon { right: 20px; opacity: .3; }
+.intheforest .hd p.story { margin-right: 66px; }
+.intheforest .hd input { display: block; font-size: .8rem; font-family: "Gloria Hallelujah", cursive; color: #4b5aff; }
+.intheforest .hd .close { height: 300px; overflow: hidden; clear: both; transition: all .6s; }
+.intheforest .hd .close input.whoitis { padding-top: 270px; font-size: .6em; font-weight: 800; margin-right: auto; margin-left: auto; width: 320px; opacity: 1; transition: all 4s; }
+.intheforest .hd .close input.whoitis[readonly="readonly"] { border: none; color: #323cff; }
+.intheforest .hd .close input.whoitis::-webkit-input-placeholder { color: #4b5aff; }
+.intheforest .hd .close input.whoitis::-moz-placeholder { color: #4b5aff; }
+.intheforest .hd .close input.whoitis::-moz-placeholder { color: #4b5aff; }
+.intheforest .hd .close input.whoitis::-ms-input-placeholder { color: #4b5aff; }
+.intheforest .hd .close input.whoitis::placeholder-shown { color: #4b5aff; }
+.intheforest .hd .close input.whoitis:focus::-webkit-input-placeholder { color: #4b5aff; }
+.intheforest .hd .close input.whoitis:focus::-moz-placeholder { color: #4b5aff; }
+.intheforest .hd .close input.whoitis:focus::-moz-placeholder { color: #4b5aff; }
+.intheforest .hd .close input.whoitis:focus::-ms-input-placeholder { color: #4b5aff; }
+.intheforest .hd .close input.whoitis:focus::placeholder-shown { color: #4b5aff; }
+.intheforest .hd input.whisper { font-size: 1em; color: transparent; text-shadow: 0 0px 8px #323cff; text-align: center; margin: 0; border: none; transform: rotate(3deg); padding: 0 0 50px 0; width: 100%; transition-property: height,transform; transition-duration: .4s; }
+.intheforest .hd input.whisper::-webkit-input-placeholder { color: transparent; text-shadow: 0 0 1px #4b5aff; }
+.intheforest .hd input.whisper::-moz-placeholder { color: transparent; text-shadow: 0 0 1px #4b5aff; }
+.intheforest .hd input.whisper::-ms-input-placeholder { color: transparent; text-shadow: 0 0 1px #4b5aff; }
+.intheforest .hd input.whisper::placeholder-shown { color: transparent; text-shadow: 0 0 1px #4b5aff; }
+.intheforest .hd input.whisper:focus { font-size: 1.2em; color: transparent; text-shadow: 0 0 13px #323cff; background: url(../img/gif.gif) top center no-repeat; }
+.intheforest .hd input.whisper:focus::placeholder-shown { color: transparent; text-shadow: 0 0 5px rgba(50, 60, 255, 0.6); text-decoration: none; }
+.intheforest .hd input.whisper:focus::-moz-placeholder { color: transparent; text-shadow: 0 0 5px rgba(50, 60, 255, 0.6); text-decoration: none; }
+.intheforest .hd input.whisper:focus::-ms-input-placeholder { color: transparent; text-shadow: 0 0 5px rgba(50, 60, 255, 0.6); text-decoration: none; }
+.intheforest .hd input.whisper:focus::-webkit-input-placeholder { color: transparent; text-shadow: 0 0 5px rgba(50, 60, 255, 0.6); text-decoration: none; }
+.intheforest .barber1:after, .intheforest .barber2:after, .intheforest .barber3:after { background: url(../img/barber1.png) center center no-repeat; content: ""; display: block; position: absolute; top: 0; bottom: 0; left: 0; right: 0; background-size: auto 100%; z-index: -1; }
+.intheforest .barber2::after { background-image: url(../img/barber2.png); }
+.intheforest .barber3::after { background-image: url(../img/barber3.png); }
+.intheforest .shd { background: center center no-repeat, linear-gradient(to bottom, rgba(17, 17, 17, 0) 80%, #111111 100%); background: center center no-repeat, -moz-linear-gradient(top, rgba(17, 17, 17, 0) 80%, #111111 100%); background: center center no-repeat, -webkit-linear-gradient(top, #111111 80%, rgba(17, 17, 17, 0) 100%); }
+.intheforest .shd:after { background-size: auto 100%; opacity: .4; -webkit-animation: none; }
+.intheforest .shd .icon, .intheforest .shd p.story { opacity: 0; }
+.intheforest .shd .close { height: 0px; }
+.intheforest .shd .close input.whoitis { opacity: 0; }
+.intheforest .shd input.whisper { margin-bottom: 0; margin-top: 40px; padding: 0 0 0 0; font-size: .6em; transform: rotate(0deg); }
+.intheforest .shd input.whisper::-webkit-input-placeholder { text-shadow: 0 0 1px rgba(75, 90, 255, 0.6); text-decoration: none; }
+.intheforest .shd input.whisper::-moz-placeholder { text-shadow: 0 0 1px rgba(75, 90, 255, 0.6); text-decoration: none; }
+.intheforest .shd input.whisper::-ms-input-placeholder { text-shadow: 0 0 1px rgba(75, 90, 255, 0.6); text-decoration: none; }
+.intheforest .shd input.whisper::placeholder-shown { text-shadow: 0 0 1px rgba(75, 90, 255, 0.6); text-decoration: none; }
+.intheforest .hearsays { width: 100%; display: inherit; flex: 1; flex-direction: column-reverse; position: relative; margin-top: 400px; }
+.intheforest .hearsays .gra { height: 100%; position: absolute; left: 0; right: 0; bottom: 0; }
+.intheforest .hearsays li { -webkit-animation: fla 1s; font-size: 1.2rem; color: #111; text-shadow: 0px -1px 0px #000,0px 1px 1px #222; line-height: 1.4; font-family: "Gloria Hallelujah", cursive; word-break: keep-all; word-wrap: break-word; padding: 20px 0; text-align: right; }
+.intheforest .hearsays li span { font-size: .8em; display: block; margin: .5em 0 1em; }
+.intheforest .hearsays li span:before { content: " from "; font-size: .4em; }
+.intheforest .hearsays li:nth-child(2n+2) { text-align: left; }
+.intheforest .shd + .hearsays { margin-top: 380px; }
+
+@media screen and (min-width: 614px) { .intheforest .hd p { font-size: .5em; padding: .8em 0 0; } }
+
+/*# sourceMappingURL=main.css.map */

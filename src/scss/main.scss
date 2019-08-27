@@ -1,0 +1,7 @@
+@import "mixin";	// 放置所有 Sass 全域變數與 Mixin  
+@import "reset";	// normalize.css  
+@import "extnd";	// 拿來合併樣式，都放@extend用的檔案  
+@import "layout"; 	// 共同框架  
+@import "index";	// 首頁  
+@import "page";		// 內頁   
+@import "xxx";		// 各xxx單元CSS  

@@ -1,0 +1,93 @@
+//fonts
+@import url(https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Ubuntu|Belleza);
+$handtxt: 'Gloria Hallelujah', cursive; 
+$storytxt: 'Belleza', sans-serif;
+$maintxt:'Ubuntu', sans-serif;
+
+//
+// $bgcolor: rgba(23,24,33,1);
+// $bgcolor05: rgba(23,24,33,.6);
+// $bgcolor0: rgba(23,24,33,0);  
+$bgcolor: rgba(17,17,17,1);
+$bgcolor05: rgba(17,17,17,.8);
+$bgcolor0: rgba(17,17,17,0);  
+
+$tlight:rgba(255,255,255,1);
+$tlight0:rgba(255,255,255,.6); 
+$tdark:rgba(0,0,0,1);
+$tdark0:rgba(0,0,0,.6);
+$focuslight:rgba(50,60,255,1);
+$focuslight0:rgba(50,60,255,.6);
+$focuslighta:rgba(75,90,255,1);
+$focuslighta0:rgba(75,90,255,.6);
+$focusdark:rgba(00,33,255,1);
+$focusdark0:rgba(00,33,255,.6);
+$gap:20px;
+//
+body{
+	-webkit-font-smoothing: antialiased;
+	font-family: $maintxt;
+	
+}
+.gra {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#171211+0,171211+100&0+0,1+100 */
+background: -moz-linear-gradient(top, $bgcolor0 0%, $bgcolor05 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, $bgcolor0 0%, $bgcolor05 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, $bgcolor0 0%, $bgcolor05 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000F0F1C', endColorstr='#770F0F1C',GradientType=0 ); /* IE6-9 */
+
+}
+
+
+//anim
+
+@keyframes fla {
+	0% {
+		color:#fff;
+		text-shadow:0px -1px 0px $bgcolor,0px 1px 1px $bgcolor; 
+	} 
+	100% {
+		color:#111;
+		text-shadow:0px -1px 0px #000,0px 1px 1px #222; 
+	}
+}
+
+@keyframes filteranim {
+  0% {-webkit-filter: sepia(0) saturate(2); }
+  50% {-webkit-filter: sepia(1) saturate(3); }
+  100% {-webkit-filter: sepia(0) saturate(2); }
+}
+/*
+filter-me {
+  filter: <filter-function> [<filter-function>]* | none
+} 
+
+blur() 			模糊
+brightness() 	明亮
+contrast() 		對比
+drop-shadow() 	陰影
+grayscale() 	灰階
+hue-rotate() 	色相環
+invert() 		反轉
+opacity() 		透明度
+saturate() 		彩度
+sepia() 		褐色調
+url() - for applying SVG filters
+custom() - "coming soon"
+  
+*/
+
+@keyframes txtf {
+    0% {text-shadow:0 0 5px rgba(255,255,255,0)}
+    15% {text-shadow:0 0 2px rgba(255,255,255,.3)}
+    35% {text-shadow:0 0 0px rgba(255,255,255,.6)}
+    80% {text-shadow:0 0 0px rgba(255,255,255,.6)}
+    90% {text-shadow:0 0 5px rgba(255,255,255,0)}
+    100% {text-shadow:0 0 5px rgba(255,255,255,0)}
+}
+.txtflash{
+	color:rgba(255,255,255,0);
+	animation-name: txtf;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}

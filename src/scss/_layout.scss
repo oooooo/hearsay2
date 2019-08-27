@@ -1,0 +1,19 @@
+label {font-size:.6em;}
+input {
+  font-size:1em;
+  box-sizing: border-box;
+	font-family: 'Quicksand', sans-serif;
+  color:#fff;
+  border:none;
+  background:none;
+  // border-bottom:1px dotted rgba(255,255,255,.6);
+  width:auto;
+	
+} 
+input:focus{outline: none; }
+
+ul, ul li{ 
+  margin:0; padding:0;
+  list-style:none;
+}
+p {line-height:1.4;}

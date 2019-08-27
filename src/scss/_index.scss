@@ -1,0 +1,206 @@
+$tophdw:380px;
+.ic_tree, .ic_king{fill:#fff;}
+.icon {width:36px; height:36px;} 
+
+html{height:100%; backgrond:$bgcolor; }
+body {
+	min-height:100%;
+	display:flex;
+	color:rgba(255,255,255,.6); 
+	background:$bgcolor; 
+	font-size:26px; 
+}
+ 
+.intheforest { 
+	display:inherit;
+	flex-direction:column;
+	flex:1; //填滿
+	padding:$gap; 
+	.hd,
+	.footnote { 
+		p{font-size:.5em;margin:0;font-family:$storytxt; transition: all .2s;}
+		.icon {transition: all .2s;}
+	}
+	.footnote {   
+		//position:fixed; bottom:0; right:0;left:0; padding:20px;
+		background:linear-gradient(to bottom, $bgcolor0 0%, $bgcolor05 15%);  
+		background:-moz-linear-gradient(top, $bgcolor0 0%, $bgcolor05 15%);  
+		background:-webkit-linear-gradient(top,$bgcolor0 0% ,$bgcolor05 15%); 
+		.icon{display: block;}
+		p { text-align:center; margin:0; opacity:.4; }
+		a{ display:inline-block;margin-left:auto;margin-right:auto; opacity:.1; 
+			&:hover {opacity:1;}
+		}
+	} 
+	.hd{ //漸層
+		background:linear-gradient(to bottom, $bgcolor0 90%, $bgcolor 100%);  
+		background:-moz-linear-gradient(top, $bgcolor0 90%, $bgcolor 100%);  
+		background:-webkit-linear-gradient(top,$bgcolor 90% ,$bgcolor0 100%);  
+		position:fixed; left:0;right:0; top:0;
+		
+		z-index:50; 
+		padding:$gap; 
+		&:after{ -webkit-animation: filteranim 5s infinite;}
+		.icon,	p.story {position:fixed;} 
+		.icon {right:20px;opacity:.3; } 
+		p.story { margin-right:66px; }
+		//一般 欄位有字 
+		
+		input{ display:block;font-size:.8rem;font-family:$handtxt;color:$focuslighta;} 
+		.close { 
+			height:300px; overflow: hidden;;
+			clear:both; transition: all .6s; 
+			input.whoitis { 
+				padding-top:270px;
+				font-size:.6em; font-weight:800;
+				margin-right:auto;margin-left:auto;  
+				width:320px;
+				opacity:1;
+				transition: all 4s;
+				//一般 欄位有字 
+				// border-bottom:1px dotted $tdark;
+				&[readonly="readonly"] {border:none;color:$focuslight;}
+
+				//一般 空欄位 holder 光暈襯字
+	  			&::-webkit-input-placeholder { color:$focuslighta; }
+				&::-moz-placeholder {color:$focuslighta;}
+				&::-moz-placeholder {color:$focuslighta;}
+				&::-ms-input-placeholder {color:$focuslighta;}
+				&::placeholder-shown {color:$focuslighta;}
+				
+				&:focus{ 
+	  				//focus 空欄位 holder 
+	  				&::-webkit-input-placeholder { color:$focuslighta;}
+					&::-moz-placeholder {color:$focuslighta; }
+					&::-moz-placeholder {color:$focuslighta;}
+					&::-ms-input-placeholder {color:$focuslighta;}
+					&::placeholder-shown {color:$focuslighta;}
+				}
+			}
+		} 
+
+					  
+		input.whisper{ 
+			//一般 欄位有字 
+			font-size:1em; 
+			color:rgba(0,0,0,0);
+			text-shadow: 0 0px 8px $focuslight; 
+			text-align:center;  
+			margin:0; 
+			border:none; 
+			transform: rotate(3deg);
+			padding:0 0 50px 0;
+			width: 100%;  
+			transition-property:height,transform;
+			transition-duration:.4s;
+			//一般 空欄位 holder 陰影襯字
+			&::-webkit-input-placeholder { color:rgba(0,0,0,0); text-shadow:0 0 1px $focuslighta;} 
+			&::-moz-placeholder {color:rgba(0,0,0,0); text-shadow:0 0 1px $focuslighta;}
+			&::-ms-input-placeholder {color:rgba(0,0,0,0); text-shadow:0 0 1px $focuslighta;}
+			&::placeholder-shown {color:rgba(0,0,0,0); text-shadow:0 0 1px $focuslighta;}
+
+			&:focus{
+				//focus 欄位有字 陰影當字
+				font-size:1.2em; 
+				color:rgba(0,0,0,0);
+				text-shadow:0 0 13px $focuslight;
+				background:url(../img/gif.gif) top center no-repeat; 
+			
+				//focus 空欄位 holder 陰影當字示意
+				&::placeholder-shown {color:rgba(0,0,0,0); text-shadow:0 0 5px $focuslight0;text-decoration:none; }
+				&::-moz-placeholder {color:rgba(0,0,0,0);text-shadow:0 0 5px $focuslight0 ;text-decoration:none;}
+				&::-ms-input-placeholder {color:rgba(0,0,0,0);text-shadow:0 0 5px $focuslight0 ;text-decoration:none;}
+				&::-webkit-input-placeholder {color:rgba(0,0,0,0);text-shadow:0 0 5px $focuslight0;text-decoration:none; }
+			}  
+		} 
+	}
+	
+	.barber1, .barber2, .barber3{
+		&:after{
+
+			background:url(../img/barber1.png) center center no-repeat;
+			content:""; display:block; 
+			position:absolute; top:0; bottom:0; left:0; right:0; 
+			background-size:auto 100%;
+			z-index:-1; 
+		}  
+	} 
+	.barber2::after {background-image:url(../img/barber2.png); }
+	.barber3::after {background-image:url(../img/barber3.png); }
+
+ 	.shd{
+ 		background:center center no-repeat, linear-gradient(to bottom, $bgcolor0 80%, $bgcolor 100%);  
+		background:center center no-repeat, -moz-linear-gradient(top, $bgcolor0 80%, $bgcolor 100%);  
+		background:center center no-repeat, -webkit-linear-gradient(top,$bgcolor 80% ,$bgcolor0 100%); 
+ 		&:after{
+ 			background-size:auto 100%; 
+ 			opacity:.4;
+ 			-webkit-animation: none;
+ 		}
+ 		.icon, p.story{opacity:0;} 
+ 		.close { 
+ 			height:0px; 
+	 		input.whoitis { opacity:0;}
+ 		} 
+		input.whisper{
+			margin-bottom:0;
+			margin-top:40px;
+			padding:0 0 0 0;
+			font-size:.6em;
+			transform: rotate(0deg);
+			//一般 空欄位 holder 陰影襯字
+			&::-webkit-input-placeholder {text-shadow:0 0 1px $focuslighta0;text-decoration:none;} 
+			&::-moz-placeholder {text-shadow:0 0 1px $focuslighta0;text-decoration:none;}
+			&::-ms-input-placeholder {text-shadow:0 0 1px $focuslighta0;text-decoration:none;}
+			&::placeholder-shown {text-shadow:0 0 1px $focuslighta0;text-decoration:none;}
+		} 
+	} 
+	
+	.hearsays {  
+		width: 100%;
+		//max-width:400px;margin:auto;
+		display:inherit;
+		flex:1; 
+		flex-direction:column-reverse;
+		position:relative;
+		margin-top:$tophdw + $gap;
+		.gra{
+			height:100%; position:absolute; left:0;right:0;bottom:0}
+		li {
+			-webkit-animation: fla 1s;
+			font-size:1.2rem;
+			color:#111;
+			text-shadow:0px -1px 0px #000,0px 1px 1px #222; 
+			line-height:1.4;
+			font-family: $handtxt;
+			word-break: keep-all; 
+			word-wrap: break-word; 
+			padding:$gap 0; 
+			text-align:right; 
+
+			span { 
+				font-size:.8em; display:block;
+				margin:.5em 0 1em;
+				&:before {
+					content:" from ";font-size:.4em;
+				}
+			}
+
+			&:nth-child(2n+2) {
+				text-align:left; 
+			}
+		} 
+	} 
+	.shd + .hearsays {
+		margin-top:$tophdw;
+	}
+	 
+}  
+@media screen and (min-width:614px) { 
+	.intheforest{
+		.hd{   
+			p{font-size:.5em; padding:.8em 0 0;}
+		}
+	} 
+}
+ 
